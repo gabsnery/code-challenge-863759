@@ -1,0 +1,82 @@
+.Home {
+  width: 100%;
+  min-height: 100px;
+  margin-top: 30px;
+  font-size: large;
+  .card_weather {
+    width: calc(100% - 110px);
+    max-width: 600px;
+    margin: 0 55px;
+    .cardHeader {
+      display: inline-grid;
+      grid-template-columns: 3fr 1fr;
+      width: 100%;
+      margin-bottom: 5px;
+      .leftSide {
+        display: flex;
+        align-items: center;
+      }
+      .rightSide {
+        float: right;
+        text-align: right;
+        .button{
+          color: black;
+          &:hover {
+            color: #FFCC00;
+          }
+        }
+      }
+    }
+    .card_weatherInformations {
+      grid-template-columns: repeat(4, 1fr);
+      border: 2px solid #70757a;
+      background-color: rgba(255, 204, 0,0.6);
+      border-radius: 6px;
+      min-height: 100px;
+      display: grid;
+
+      .group_pic_temp {
+        display: flex;
+        color: #70757a;
+        height: fit-content;
+        margin-right: 10px;
+
+        .pic {
+          width: 90px;
+        }
+        .Temperature {
+          display: flex;
+          .Value {
+            font-size: 64px;
+          }
+          .Unit {
+            font-size: 32px;
+          }
+        }
+      }
+      .group_rain {
+        height: fit-content;
+        display: grid;
+        color: #70757a;
+        font-size: 16px;
+        .description {
+          text-transform: capitalize;
+        }
+      }
+      .group_region {
+        .City {
+          font-size: 24px;
+          color: #000;
+        }
+        .Date {
+          color: #70757a;
+          font-size: 12px;
+        }
+        .Resume {
+          color: #70757a;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
